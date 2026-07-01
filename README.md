@@ -5,11 +5,7 @@ Project Overview
 This project focuses on generating human-like text using the pretrained GPT-2 model fine-tuned on a dataset of famous quotes. Text generation is an important application of Natural Language Processing because it helps in understanding how language models learn writing styles, vocabulary, and sentence structure from data.
 The goal of this project was to fine-tune GPT-2 on custom quote data, generate new quote-like text from prompts, and evaluate the quality of the generated output.
 
-Files Included
-
-FileDescriptiongpt2_quotes_finetune.ipynbComplete notebook containing data preprocessing, model fine-tuning, text generation, and evaluationQuotes.csvDataset used for the projectREADME.mdProject documentation
-
-Dataset
+Dataset : https://www.kaggle.com/datasets/manann/quotes-500k?utm_source=chatgpt.com
 
 Project Workflow
 
