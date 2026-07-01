@@ -9,38 +9,38 @@ Dataset : https://www.kaggle.com/datasets/manann/quotes-500k?utm_source=chatgpt.
 
 Project Workflow
 
-1. Data Cleaning:
--Loaded and inspected the dataset
--Dropped rows with missing quotes
--Removed extra spaces and newlines from quote text 
--Sampled 3000 quotes for training
+### 1. Data Cleaning:
+- Loaded and inspected the dataset
+- Dropped rows with missing quotes
+- Removed extra spaces and newlines from quote text 
+- Sampled 3000 quotes for training
 
-2. Data Preprocessing:
--Split the data into train (90%) and test (10%) sets
--Saved quotes into text files separated by GPT-2's end-of-text token
--Tokenized the text (converted words into numbers GPT-2 understands)
--Cut the token list into fixed-size chunks (block_size = 64)
+### 2. Data Preprocessing:
+- Split the data into train (90%) and test (10%) sets
+- Saved quotes into text files separated by GPT-2's end-of-text token
+- Tokenized the text (converted words into numbers GPT-2 understands)
+- Cut the token list into fixed-size chunks (block_size = 64)
 
-3. Exploratory Data Analysis:
+### 3. Exploratory Data Analysis:
 Analyzed:
--Dataset shape and column types
--Quote length distribution
--Missing value counts
--Sample quotes across different categories
+- Dataset shape and column types
+- Quote length distribution
+- Missing value counts
+- Sample quotes across different categories
 
-4. Model Building:
+### 4. Model Building:
 GPT-2 was fine-tuned using the Hugging Face Trainer API:
--Base Model: gpt2 (124M parameters)
--Epochs: 3
--Batch Size: 4
--Learning Rate: 5e-5
+- Base Model: gpt2 (124M parameters)
+- Epochs: 3
+- Batch Size: 4
+- Learning Rate: 5e-5
 
-6. Text Generation:
+### 6. Text Generation:
 Multiple decoding methods were tested to generate text from prompts:
--Greedy Search
--Beam Search
--Top-K Sampling
--Top-P (Nucleus) Sampling
+- Greedy Search
+- Beam Search
+- Top-K Sampling
+- Top-P (Nucleus) Sampling
 
 Sample Prompts and Output
 
@@ -61,7 +61,7 @@ Decoding Method Comparison
 | Top-P Sampling | Picks from words covering P% probability — most natural |
 
 
-Conclusion
+### Conclusion:
 
 This project demonstrates how a pretrained language model like GPT-2 can be fine-tuned on a custom dataset to generate domain-specific text. By training on famous quotes, the model learns the short, meaningful, and inspirational tone of the data and can produce similar text from a given prompt.
 
