@@ -9,43 +9,38 @@ Dataset : https://www.kaggle.com/datasets/manann/quotes-500k?utm_source=chatgpt.
 
 Project Workflow
 
-1. Data Cleaning
-Loaded and inspected the dataset
-Dropped rows with missing quotes
-Removed extra spaces and newlines from quote text
-Sampled 3000 quotes for training
+1. Data Cleaning:
+-Loaded and inspected the dataset
+-Dropped rows with missing quotes
+-Removed extra spaces and newlines from quote text 
+-Sampled 3000 quotes for training
 
-2. Data Preprocessing
-Split the data into train (90%) and test (10%) sets
-Saved quotes into text files separated by GPT-2's end-of-text token
-Tokenized the text (converted words into numbers GPT-2 understands)
-Cut the token list into fixed-size chunks (block_size = 64)
+2. Data Preprocessing:
+-Split the data into train (90%) and test (10%) sets
+-Saved quotes into text files separated by GPT-2's end-of-text token
+-Tokenized the text (converted words into numbers GPT-2 understands)
+-Cut the token list into fixed-size chunks (block_size = 64)
 
-3. Exploratory Data Analysis
+3. Exploratory Data Analysis:
 Analyzed:
-Dataset shape and column types
-Quote length distribution
-Missing value counts
-Sample quotes across different categories
+-Dataset shape and column types
+-Quote length distribution
+-Missing value counts
+-Sample quotes across different categories
 
-4. Model Building
+4. Model Building:
 GPT-2 was fine-tuned using the Hugging Face Trainer API:
-Base Model: gpt2 (124M parameters)
-Epochs: 3
-Batch Size: 4
-Learning Rate: 5e-5
+-Base Model: gpt2 (124M parameters)
+-Epochs: 3
+-Batch Size: 4
+-Learning Rate: 5e-5
 
-5. Text Generation
+6. Text Generation:
 Multiple decoding methods were tested to generate text from prompts:
-Greedy Search
-Beam Search
-Top-K Sampling
-Top-P (Nucleus) Sampling
-
-6. Model Evaluation
-The model was evaluated using:
-Perplexity — measures how well the model learned the data (lower = better)
-Manual Review — checking coherence, grammar, and style of generated text
+-Greedy Search
+-Beam Search
+-Top-K Sampling
+-Top-P (Nucleus) Sampling
 
 Sample Prompts and Output
 
